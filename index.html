@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de moneda</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+    <main>
+        <h1>Conversor de monedas</h1>
+        <div>
+            <h2>Escribe el valor que deseas cambiar</h2>
+            <input type="number" valor= "0" id="valor" placeholder="$5000">
+            <br>
+            <select class="moneda">
+                <option value="dolar">Dolares</option>
+                <option value="euro">Euros</option>
+            </select>
+            <button onclick="convertirValor()">convertir</button>
+            <p class="resultado">resultado</p>
+        </div>
+
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
