@@ -1,16 +1,20 @@
 let datos ;
 
 async function obtenerdatos(){
-    const res = await fetch('https://mindicador.cl/api/');
-    datos = await res.json();
+    try{
+        const res = await fetch('https://mindicador.cl/api/');
+        datos = await res.json();
+    }catch{
+        alert(`Se generó un error en nuecistema el cual fue ${error}`);
+    }
+    
 }
 
 const convertirValor = function(){
     const valor = document.querySelector('#valor').value;
     const moneda = document.querySelector('.moneda').value;
 
-    try
-    {
+    try{
         const valorCombertido = valor / datos[moneda].valor;
 
         if(moneda === 'dolar'){
