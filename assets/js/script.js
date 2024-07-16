@@ -19,8 +19,10 @@ const convertirValor = function(){
 
         if(moneda === 'dolar'){
             divisa = "Dolares";
-        }else{
+        }else if(moneda === 'euro'){
             divisa = "Euros";
+        }else{
+            divisa = "Bitcoins";
         }
         document.querySelector('.resultado').innerHTML= `$ ${valor} pesos equibalen a ${valorCombertido} ${divisa}`;
     }
